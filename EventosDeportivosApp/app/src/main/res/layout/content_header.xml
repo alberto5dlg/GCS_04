@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="franciscoguixot.eventosdeportivosapp.header"
+    tools:showIn="@layout/activity_header">
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@mipmap/home"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/event"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@mipmap/setting"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@mipmap/search"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@mipmap/user"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <LinearLayout
+        android:layout_width="399dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="-1dp"></LinearLayout>
+</android.support.constraint.ConstraintLayout>
