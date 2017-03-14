@@ -6,5 +6,13 @@
     <string name="title_activity_buscar">Buscar</string>
     <string name="title_activity_eventos">Eventos</string>
     <string name="title_activity_registro">Registro</string>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <string name="title_activity_header">header</string>
+=======
+    <string name="title_activity_crear_evento">CrearEvento</string>
+>>>>>>> Crear Evento y hacer foto de perfil
+=======
+    <string name="title_activity_crear_evento">CrearEvento</string>
+>>>>>>> 17d167d03bbb8c489258af626b32928dd4ca9222
 </resources>
