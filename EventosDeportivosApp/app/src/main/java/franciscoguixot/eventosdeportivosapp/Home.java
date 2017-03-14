@@ -40,4 +40,9 @@ public class Home extends AppCompatActivity {
         username.setText(datoUsername);
     }
 
+    public void goCrearEvento(View view) {
+        Intent i = new Intent(Home.this, CrearEvento.class);
+        startActivity(i);
+    }
+
 }
