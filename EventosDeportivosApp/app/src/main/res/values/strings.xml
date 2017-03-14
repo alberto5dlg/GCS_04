@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">EventosDeportivosApp</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="title_activity_buscar">Buscar</string>
+    <string name="title_activity_eventos">Eventos</string>
+    <string name="title_activity_registro">Registro</string>
 </resources>
