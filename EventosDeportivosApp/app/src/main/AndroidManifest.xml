@@ -27,6 +27,10 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".Perfil"
+            android:label="Perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Buscar"
             android:label="@string/title_activity_buscar"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -39,19 +43,13 @@
             android:label="@string/title_activity_registro"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-<<<<<<< HEAD
-<<<<<<< HEAD
             android:name=".header"
-            android:label="@string/title_activity_header"
-=======
+            android:label="@string/title_activity_header" />
+        <activity
             android:name=".CrearEvento"
             android:label="@string/title_activity_crear_evento"
->>>>>>> Crear Evento y hacer foto de perfil
-=======
-            android:name=".CrearEvento"
-            android:label="@string/title_activity_crear_evento"
->>>>>>> 17d167d03bbb8c489258af626b32928dd4ca9222
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void goHome(View view) {
+    public void goEventos(View view) {
         Intent i = new Intent(MainActivity.this, Home.class);
         startActivity(i);
     }

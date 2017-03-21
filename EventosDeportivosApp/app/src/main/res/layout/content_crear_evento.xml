@@ -15,11 +15,24 @@
     tools:showIn="@layout/activity_crear_evento"
     android:weightSum="1">
 
-    <ImageView
-        android:layout_width="119dp"
-        android:layout_height="125dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/imageView4" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="142dp">
+
+        <ImageView
+            android:layout_width="119dp"
+            android:layout_height="125dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageView4"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button9" />
+    </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
@@ -137,7 +150,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/button7" />
+            android:id="@+id/button7"
+            android:onClick="crearEvento" />
     </RelativeLayout>
 
 </LinearLayout>

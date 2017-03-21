@@ -43,13 +43,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView13"
-                    android:layout_weight="1" />
+                    android:layout_weight="2.46" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView19"
-                    android:layout_weight="12.52" />
+                    android:layout_weight="12.52"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,7 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView21"
-                    android:layout_weight="8.02" />
+                    android:layout_weight="8.02"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -89,7 +91,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView23"
-                    android:layout_weight="6.47" />
+                    android:layout_weight="6.47"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -109,7 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView24"
-                    android:layout_weight="10.45" />
+                    android:layout_weight="10.45"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,7 +133,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView26"
-                    android:layout_weight="19.88" />
+                    android:layout_weight="19.88"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -149,7 +154,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView28"
-                    android:layout_weight="23.75" />
+                    android:layout_weight="23.75"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -169,7 +175,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView30"
-                    android:layout_weight="10.86" />
+                    android:layout_weight="10.86"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

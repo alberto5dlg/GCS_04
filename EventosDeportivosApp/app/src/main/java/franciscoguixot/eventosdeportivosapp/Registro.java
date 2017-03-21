@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+
 public class Registro extends AppCompatActivity {
 
     private EditText nombre;
@@ -67,7 +69,7 @@ public class Registro extends AppCompatActivity {
         });
     }
 
-    public void goHome(View view) {
+    public void goPerfil(View view) {
         if (nombre.getText().toString().equals("") || apellidos.getText().toString().equals("")
                 || nombreUsuario.getText().toString().equals("") || contraseña.getText().toString().equals("")
                 || contraseñaRepetida.getText().toString().equals("") || email.getText().toString().equals("")
@@ -79,10 +81,14 @@ public class Registro extends AppCompatActivity {
 
         } else {
             if (contraseña.getText().toString().equals(contraseñaRepetida.getText().toString())) {
-                Intent i = new Intent(Registro.this, Home.class);
+                Intent i = new Intent(Registro.this, Perfil.class);
                 i.putExtra("nombre", nombre.getText().toString());
                 i.putExtra("apellidos", apellidos.getText().toString());
                 i.putExtra("nombreUsuario", nombreUsuario.getText().toString());
+                i.putExtra("email", email.getText().toString());
+                i.putExtra("edad", fechaNac.getText().toString());
+                i.putExtra("ciudad", provincia.getText().toString());
+                i.putExtra("pais", pais.getText().toString());
                 startActivity(i);
             } else {
                 Toast toast2 = Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden,vuelve a introducirlas", Toast.LENGTH_LONG);

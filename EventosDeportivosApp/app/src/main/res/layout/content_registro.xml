@@ -179,7 +179,7 @@
                         android:id="@+id/editText11" />
 
                     <TextView
-                        android:text="Fecha de nacimiento"
+                        android:text="Edad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView12" />
@@ -187,7 +187,7 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="date"
+                        android:inputType="number"
                         android:ems="10"
                         android:id="@+id/editText12" />
 
@@ -207,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/button"
                     android:layout_weight="1"
-                    android:onClick="goHome" />
+                    android:onClick="goPerfil" />
 
                 <Button
                     android:text="Cancelar"
