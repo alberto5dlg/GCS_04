@@ -34,4 +34,24 @@ public class Home extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void goPerfil(View view) {
+        Intent i = new Intent(Home.this, Perfil.class);
+        startActivity(i);
+    }
+
+    public void goBuscar(View view) {
+        Intent i = new Intent(Home.this, Buscar.class);
+        startActivity(i);
+    }
+
+    public void goHome(View view) {
+        Intent i = new Intent(Home.this, Home.class);
+        startActivity(i);
+    }
+
+    public void goEvento(View view) {
+        Intent i = new Intent(Home.this, Eventos.class);
+        startActivity(i);
+    }
+
 }

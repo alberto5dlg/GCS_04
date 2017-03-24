@@ -12,12 +12,67 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@mipmap/setting" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="139dp"
+                android:layout_marginStart="43dp"
+                android:layout_toEndOf="@+id/button12"
+                android:layout_weight="1"
+                android:background="@mipmap/event"
+                android:onClick="goEvento" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="139dp"
+                android:layout_weight="1"
+                android:background="@mipmap/home"
+                android:onClick="goHome" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/button12"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="82dp"
+                android:layout_marginLeft="139dp"
+                android:layout_weight="1"
+                android:background="@mipmap/search"
+                android:onClick="goBuscar" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="139dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@mipmap/user"
+                android:onClick="goPerfil" />
+        </RelativeLayout>
 
     </android.support.design.widget.AppBarLayout>
 

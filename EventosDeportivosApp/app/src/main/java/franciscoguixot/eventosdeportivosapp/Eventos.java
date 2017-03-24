@@ -43,6 +43,25 @@ public class Eventos extends AppCompatActivity {
         Intent i = new Intent(Eventos.this, CrearEvento.class);
         startActivity(i);
     }
+    public void goPerfil(View view) {
+        Intent i = new Intent(Eventos.this, Perfil.class);
+        startActivity(i);
+    }
+
+    public void goBuscar(View view) {
+        Intent i = new Intent(Eventos.this, Buscar.class);
+        startActivity(i);
+    }
+
+    public void goHome(View view) {
+        Intent i = new Intent(Eventos.this, Home.class);
+        startActivity(i);
+    }
+
+    public void goEvento(View view) {
+        Intent i = new Intent(Eventos.this, Eventos.class);
+        startActivity(i);
+    }
 
 
 }

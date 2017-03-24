@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -34,15 +36,40 @@ public class Perfil extends AppCompatActivity{
         ciudad = (TextView) findViewById(R.id.textView28);
         pais = (TextView) findViewById(R.id.textView30);
 
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
 
-        nombre.setText(extras.get("nombre") + " " + extras.get("apellidos"));
-        usuario.setText((String) extras.get("nombreUsuario"));
-        email.setText((String) extras.get("email"));
-        edad.setText((String) extras.get("edad"));
-        ciudad.setText((String) extras.get("ciudad"));
-        pais.setText((String) extras.get("pais"));
+
+        Intent intent = getIntent();
+        Bundle extras;
+        extras = intent.getExtras();
+        if(extras != null ) {
+            nombre.setText(extras.get("nombre") + " " + extras.get("apellidos"));
+            usuario.setText((String) extras.get("nombreUsuario"));
+            email.setText((String) extras.get("email"));
+            edad.setText((String) extras.get("edad"));
+            ciudad.setText((String) extras.get("ciudad"));
+            pais.setText((String) extras.get("pais"));
+        }
+
+    }
+
+    public void goPerfil(View view) {
+        Intent i = new Intent(Perfil.this, Perfil.class);
+        startActivity(i);
+    }
+
+    public void goBuscar(View view) {
+        Intent i = new Intent(Perfil.this, Buscar.class);
+        startActivity(i);
+    }
+
+    public void goHome(View view) {
+        Intent i = new Intent(Perfil.this, Home.class);
+        startActivity(i);
+    }
+
+    public void goEvento(View view) {
+        Intent i = new Intent(Perfil.this, Eventos.class);
+        startActivity(i);
     }
 
 }
