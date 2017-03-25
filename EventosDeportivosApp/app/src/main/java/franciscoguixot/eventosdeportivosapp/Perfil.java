@@ -45,6 +45,7 @@ public class Perfil extends AppCompatActivity{
             pais.setText((String) extras.get("pais"));
         }
 
+
     }
 
     public void goPerfil(View view) {

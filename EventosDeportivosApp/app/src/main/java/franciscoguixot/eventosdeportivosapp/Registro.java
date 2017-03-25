@@ -34,6 +34,8 @@ public class Registro extends AppCompatActivity {
     private EditText pais;
     private EditText fechaNac;
 
+    public MainActivity main;
+
     Button btnFoto;
     ImageView imagenPerfil;
 
