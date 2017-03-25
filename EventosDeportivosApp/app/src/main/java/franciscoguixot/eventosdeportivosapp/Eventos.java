@@ -1,29 +1,35 @@
 package franciscoguixot.eventosdeportivosapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class Eventos extends AppCompatActivity {
 
-    String eventos[] = {
-            "Torneo Fútbol Semana Santa",
-            "Torneo Tenis UA",
-            "Torneo Fútbol Sala Interurbanizaciones"
-    };
+    //String eventos[] = new String[10];
 
+    /*
     Integer imageId[] = {
             R.drawable.pic01,
             R.drawable.pic02,
             R.drawable.pic03
     };
+    */
 
+    private ArrayList<String> eventos;
+    private ArrayAdapter<String> adaptador;
     ListView list;
 
     @Override
@@ -33,10 +39,49 @@ public class Eventos extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        CustomList adapter = new CustomList(Eventos.this, eventos, imageId);
+        eventos = new ArrayList<String>();
+        eventos.add("Torneo Fútbol Semana Santa : Alicante : 01/04/2017");
+        eventos.add("Torneo Tenis UA : Alicante : 25/04/2017");
+        eventos.add("Torneo Fútbol Sala Interurbanizaciones : Alicante : 13/07/2017");
+
+        Intent intent = getIntent();
+        Bundle extras;
+        extras = intent.getExtras();
+        if(extras != null ) {
+            eventos.add(extras.get("nombreEvento") + " : " + extras.get("provincia") + " : " + extras.get("fechaInicio"));
+        }
+
+        adaptador = new ArrayAdapter<String>(this, R.layout.fila_lista, eventos);
 
         list = (ListView) findViewById(R.id.lista);
-        list.setAdapter(adapter);
+        list.setAdapter(adaptador);
+
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final int posicion = position;
+
+                AlertDialog.Builder dialogo = new AlertDialog.Builder(Eventos.this);
+                dialogo.setTitle("Añadir evento");
+                dialogo.setMessage("¿Desea unirse al evento?");
+                dialogo.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo, int id) {
+                        Intent i = new Intent(Eventos.this, Home.class);
+                        i.putExtra("evento", eventos.get(posicion));
+                        startActivity(i);
+                    }
+                });
+                dialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo, int id) {
+                    }
+                });
+                dialogo.show();
+
+                return false;
+            }
+        });
+
     }
 
     public void goCrearEvento(View view) {

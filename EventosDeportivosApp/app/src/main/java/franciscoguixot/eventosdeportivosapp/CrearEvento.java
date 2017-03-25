@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,16 +15,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CrearEvento extends AppCompatActivity {
 
     private EditText nombreEvento;
     private EditText precio;
-    private Spinner deporte;
-    private Spinner provincia;
+    private EditText deporte;
+    private EditText provincia;
     private EditText fechaInicio;
-    private EditText fechaFin;
     private EditText direccion;
     private EditText numeroEquipos;
     private EditText numeroJugadores;
@@ -43,10 +44,9 @@ public class CrearEvento extends AppCompatActivity {
 
         nombreEvento = (EditText) findViewById(R.id.editText14);
         precio = (EditText) findViewById(R.id.editText16);
-        deporte = (Spinner) findViewById(R.id.spinner4);
-        provincia = (Spinner) findViewById(R.id.spinner3);
+        deporte = (EditText) findViewById(R.id.editText15);
+        provincia = (EditText) findViewById(R.id.editText22);
         fechaInicio = (EditText) findViewById(R.id.editText17);
-        fechaFin = (EditText) findViewById(R.id.editText18);
         direccion = (EditText) findViewById(R.id.editText19);
         numeroEquipos = (EditText) findViewById(R.id.editText20);
         numeroJugadores = (EditText) findViewById(R.id.editText21);
@@ -68,7 +68,7 @@ public class CrearEvento extends AppCompatActivity {
     public void crearEvento(View view) {
         if (nombreEvento.getText().toString().equals("") || precio.getText().toString().equals("") ||
                 deporte.toString().equals("") || provincia.toString().equals("") || fechaInicio.getText().toString().equals("") ||
-                fechaFin.getText().toString().equals("") || direccion.getText().toString().equals("") ||
+                direccion.getText().toString().equals("") ||
                 numeroEquipos.getText().toString().equals("") || numeroJugadores.getText().toString().equals("")) {
 
             Toast toast1 = Toast.makeText(getApplicationContext(), "Hay que rellenar todos los campos", Toast.LENGTH_LONG);
@@ -76,6 +76,9 @@ public class CrearEvento extends AppCompatActivity {
 
         } else {
             Intent i = new Intent(CrearEvento.this, Eventos.class);
+            i.putExtra("nombreEvento", nombreEvento.getText().toString());
+            i.putExtra("provincia", provincia.getText().toString());
+            i.putExtra("fechaInicio", fechaInicio.getText().toString());
             startActivity(i);
         }
     }
