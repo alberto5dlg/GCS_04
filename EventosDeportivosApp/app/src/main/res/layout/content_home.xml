@@ -15,12 +15,12 @@
     tools:showIn="@layout/activity_home">
 
     <TextView
-        android:text="Próximos eventos"
+        android:id="@+id/textView18"
         android:layout_width="match_parent"
         android:layout_height="63dp"
-        android:id="@+id/textView18"
-        android:textSize="36sp"
-        android:textAlignment="center" />
+        android:text="Próximos eventos"
+        android:textAlignment="center"
+        android:textSize="36sp" />
 
     <ListView
         android:layout_width="match_parent"

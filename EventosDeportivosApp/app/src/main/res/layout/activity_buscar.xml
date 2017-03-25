@@ -24,7 +24,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="15dp"
                 android:layout_weight="1"
-                android:background="@mipmap/setting" />
+                android:background="@mipmap/setting"
+                android:onClick="goAjustes" />
 
             <Button
                 android:id="@+id/button14"

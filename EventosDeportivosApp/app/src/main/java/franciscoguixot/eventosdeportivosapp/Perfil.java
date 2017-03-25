@@ -4,13 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 
 public class Perfil extends AppCompatActivity{
@@ -50,6 +45,7 @@ public class Perfil extends AppCompatActivity{
             pais.setText((String) extras.get("pais"));
         }
 
+
     }
 
     public void goPerfil(View view) {
@@ -71,5 +67,11 @@ public class Perfil extends AppCompatActivity{
         Intent i = new Intent(Perfil.this, Eventos.class);
         startActivity(i);
     }
+
+    public void goAjustes(View view) {
+        Intent i = new Intent(Perfil.this, Ajustes.class);
+        startActivity(i);
+    }
+
 
 }

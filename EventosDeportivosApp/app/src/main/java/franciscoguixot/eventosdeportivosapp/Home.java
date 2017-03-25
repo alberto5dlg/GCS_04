@@ -2,8 +2,6 @@ package franciscoguixot.eventosdeportivosapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
@@ -11,7 +9,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
 
 import java.util.ArrayList;
 
@@ -102,5 +100,11 @@ public class Home extends AppCompatActivity {
         Intent i = new Intent(Home.this, Eventos.class);
         startActivity(i);
     }
+
+    public void goAjustes(View view) {
+        Intent i = new Intent(Home.this, Ajustes.class);
+        startActivity(i);
+    }
+
 
 }

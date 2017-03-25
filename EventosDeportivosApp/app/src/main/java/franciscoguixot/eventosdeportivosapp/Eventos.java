@@ -11,6 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -107,6 +110,12 @@ public class Eventos extends AppCompatActivity {
         Intent i = new Intent(Eventos.this, Eventos.class);
         startActivity(i);
     }
+
+    public void goAjustes(View view) {
+        Intent i = new Intent(Eventos.this, Ajustes.class);
+        startActivity(i);
+    }
+
 
 
 }
