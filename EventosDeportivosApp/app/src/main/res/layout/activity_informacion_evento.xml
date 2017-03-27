@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="franciscoguixot.eventosdeportivosapp.Ajustes">
+    tools:context="franciscoguixot.eventosdeportivosapp.InformacionEvento">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -24,7 +24,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="15dp"
                 android:layout_weight="1"
-                android:background="@mipmap/setting" />
+                android:background="@mipmap/setting"
+                android:onClick="goAjustes" />
 
             <Button
                 android:id="@+id/button14"
@@ -73,8 +74,9 @@
                 android:background="@mipmap/user"
                 android:onClick="goPerfil" />
         </RelativeLayout>
+
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_ajustes" />
+    <include layout="@layout/content_informacion_evento" />
 
 </android.support.design.widget.CoordinatorLayout>

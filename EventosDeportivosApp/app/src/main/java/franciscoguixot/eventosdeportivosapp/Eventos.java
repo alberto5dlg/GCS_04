@@ -45,7 +45,7 @@ public class Eventos extends AppCompatActivity {
         eventos = new ArrayList<String>();
         eventos.add("Torneo Fútbol Semana Santa : Alicante : 01/04/2017");
         eventos.add("Torneo Tenis UA : Alicante : 25/04/2017");
-        eventos.add("Torneo Fútbol Sala Interurbanizaciones : Alicante : 13/07/2017");
+        eventos.add("Torneo Fútbol Erasmus : Alicante : 13/07/2017");
 
         Intent intent = getIntent();
         Bundle extras;
@@ -82,6 +82,22 @@ public class Eventos extends AppCompatActivity {
                 dialogo.show();
 
                 return false;
+            }
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                final int posicion = position;
+
+                String[] evento_info = eventos.get(posicion).toString().split(" : ");
+
+                Intent i = new Intent(Eventos.this, InformacionEvento.class);
+                i.putExtra("titulo", evento_info[0]);
+                i.putExtra("provincia", evento_info[1]);
+                i.putExtra("fecha", evento_info[2]);
+                startActivity(i);
             }
         });
 
