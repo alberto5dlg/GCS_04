@@ -71,8 +71,7 @@
                 android:layout_marginLeft="139dp"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:background="@mipmap/user"
-                android:onClick="goPerfil" />
+                android:background="@mipmap/user" />
         </RelativeLayout>
     </android.support.design.widget.AppBarLayout>
 

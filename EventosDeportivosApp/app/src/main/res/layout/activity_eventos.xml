@@ -36,8 +36,7 @@
                 android:layout_marginStart="43dp"
                 android:layout_toEndOf="@+id/button12"
                 android:layout_weight="1"
-                android:background="@mipmap/event"
-                android:onClick="goEvento" />
+                android:background="@mipmap/event" />
 
             <Button
                 android:id="@+id/button12"

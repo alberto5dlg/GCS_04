@@ -59,8 +59,7 @@
                 android:layout_marginEnd="82dp"
                 android:layout_marginLeft="139dp"
                 android:layout_weight="1"
-                android:background="@mipmap/search"
-                android:onClick="goBuscar" />
+                android:background="@mipmap/search" />
 
             <Button
                 android:id="@+id/button13"
