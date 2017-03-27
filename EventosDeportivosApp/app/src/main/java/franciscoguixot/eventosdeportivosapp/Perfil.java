@@ -73,5 +73,10 @@ public class Perfil extends AppCompatActivity{
         startActivity(i);
     }
 
+    public void goEditar(View view) {
+        Intent i = new Intent(Perfil.this, EditarUsuario.class);
+        startActivity(i);
+    }
+
 
 }
