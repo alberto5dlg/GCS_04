@@ -56,6 +56,10 @@
         <activity
             android:name=".EditarUsuario"
             android:label="@string/title_activity_editar_usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InformacionEvento"
+            android:label="@string/title_activity_informacion_evento"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
